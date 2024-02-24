@@ -1,0 +1,11 @@
+version: "3.5"
+services:
+  tutormatchtt-api:
+    image: tutormatchtt-api
+    ports:
+      - "10000:10000"
+    restart: always
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      PORT: 10000
